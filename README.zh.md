@@ -1,5 +1,7 @@
 # dsh-unity-mcp
 
+[![license: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+
 一个 [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness)（DSH）bundle：**按需**把 Unity 编辑器接给智能体。
 
 DSH 自带 MCP 客户端，把 Unity 的 MCP 服务挂上去并不难。问题在"一直挂着"：Unity 服务端会发布约 49 个工具，这些工具的 schema 会进入每一次请求，哪怕你这次根本不碰 Unity。本 bundle 把那一行声明成**默认禁用**，另加一个很便宜的工具 `unity_bridge`，需要时才挂载、用完就卸载。
@@ -64,4 +66,4 @@ plugin_manager install_bundle  /path/to/dsh-unity-mcp
 
 ## 许可证
 
-尚未选择。
+MIT — 见 [LICENSE](LICENSE)。

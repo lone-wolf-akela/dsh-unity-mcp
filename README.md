@@ -1,5 +1,7 @@
 # dsh-unity-mcp
 
+[![license: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+
 A [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness) (DSH) bundle that connects your Unity editor to the agent **on demand**.
 
 DSH already ships an MCP client, so the Unity MCP server can be mounted like any other. Mounting it eagerly is the problem: the Unity server publishes ~49 tools, and their schemas ride along in every single request whether or not you are doing Unity work. This bundle ships that client row **disabled** and adds one cheap tool, `unity_bridge`, that mounts or unmounts it when you actually need it.
@@ -86,4 +88,4 @@ Change `url` if your editor serves MCP elsewhere (the MCP for Unity window shows
 
 ## License
 
-Not chosen yet.
+MIT — see [LICENSE](LICENSE).
