@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Unity 编辑器连接",
+    "description": "按需加载 Unity 编辑器工具集：默认不挂载，需要操作 Unity 时用一个小工具接通，用完即卸载。"
+  }
+}

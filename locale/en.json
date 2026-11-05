@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Unity editor bridge",
+    "description": "Loads the Unity editor toolset on demand through one cheap tool, so it is only mounted when the agent actually needs Unity."
+  }
+}

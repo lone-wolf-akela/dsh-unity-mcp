@@ -1,0 +1,24 @@
+- insert:
+    # Unity toolset stays unmounted until a session asks for it: the model or
+    # the user calls the `unity_bridge` tool, which flips this row on through
+    # Plugin Manager. Declared disabled here, so "off" is the default again
+    # once the profile-level enable override is removed.
+    - id: mcp-unity
+      name: '@deepseek-ai/dsh-mcp-client'
+      disabled: true
+      config:
+        serverName: unity
+        transport: streamable-http
+        url: http://127.0.0.1:8080/mcp
+        # The editor's server only exists while Unity runs with Start pressed.
+        # A row left enabled across a restart therefore retries quietly instead
+        # of failing the composition; an explicit `on` probes first.
+        failOnStartupError: false
+        reconnect:
+          initialDelayMs: 500
+          maxDelayMs: 30000
+          maxAttempts: 240
+
+    - id: unity-bridge-control
+      name: '@local/dsh-unity-mcp'
+      config: {}
